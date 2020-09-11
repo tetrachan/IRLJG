@@ -2059,6 +2059,7 @@ button.mfp-close {
 [ Size ]*/
 .size-101 {
   min-width: 161px;
+  max-width: 200px;
   height: 46px;
 }
 
