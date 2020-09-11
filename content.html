@@ -115,32 +115,34 @@
 
 
 
-   <section class="bg0 p-t-50 p-b-50 p-lr-cool">
+   <section class="bg0 p-t-50 p-b-50">
      <p class = "cl2 ltext-102 text-center p-b-30">
        IRLJG Streams
      </p>
-     <div class="twitch">
-  <div class="twitch-video">
-    <iframe
-      src="https://player.twitch.tv/?channel=whichjanna&parent=tetrachan.github.io"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true"
-      height="100%"
-      width="100%">
-    </iframe>
-  </div>
-  <div class="twitch-chat">
-    <iframe
-      frameborder="0"
-      scrolling="no"
-      src="https://www.twitch.tv/embed/whichjanna/chat?parent=tetrachan.github.io"
-      height="100%"
-      width="100%"
-      theme="dark" >
-    </iframe>
-  </div>
-</div>
+     <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 75%,
+        height: 75%,
+        channel: "whichjanna",
+        layout: video-with-chat,
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com
+        parent: ["tetrachan.github.io", "tetrachan.github.io"]
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+    var player = embed.getPlayer();
+    player.play();
+  });
+    </script>
+  </body>
+
 
 
    </section>
