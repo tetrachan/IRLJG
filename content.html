@@ -52,11 +52,11 @@
 
           <!-- right menu -->
           <div class="wrap-icon-header flex-w flex-r-m">
-            <a href="index.html" class="mtext-102   icon-header-item  hov-cl0 p-l-22 p-r-11 ">
+            <a href="index.html" class="mtext-102   icon-header-item cl2 hov-cl0 p-l-22 p-r-11 ">
               Home
             </a>
 
-            <a href="content.html" class="mtext-102 icon-header-item active-menu cl2 hov-cl0  p-l-22 p-r-11">
+            <a href="content.html" class="mtext-102 icon-header-item active-menu  hov-cl0  p-l-22 p-r-11">
               Content
             </a>
 
@@ -115,37 +115,38 @@
 
 
 
-   <section class="bg0 p-t-50 p-b-50">
+   <section class="bg0 p-t-50 p-b-50 p-lr-cool" >
      <p class = "cl2 ltext-102 text-center p-b-30">
        IRLJG Streams
      </p>
-     <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
+     <div class="twitch p-lr-cool">
+   <div class="twitch-video">
+     <iframe
+       src="https://player.twitch.tv/?channel=whichjanna&parent=tetrachan.github.io&autoplay=false"
+       frameborder="0"
+       scrolling="no"
+       allowfullscreen="true"
+       height="60%"
+       width="60%">
+     </iframe>
+   </div>
+   <div class="twitch-chat">
+     <iframe
+       frameborder="0"
+       scrolling="no"
+       src="https://www.twitch.tv/embed/whichjanna/chat?parent=tetrachan.github.io"
+       height="60%"
+       width="60%">
+     </iframe>
+   </div>
+ </div>
+ </section>
 
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 75%,
-        height: 75%,
-        channel: "monstercat",
-        layout: video-with-chat,
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com
-        parent: ["tetrachan.github.io", "tetrachan.github.io"]
-      });
-
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-    var player = embed.getPlayer();
-    player.play();
-  });
-    </script>
   </body>
 
 
 
-   </section>
+
 
 
 <!-- Footer -->
@@ -169,23 +170,10 @@
 <script src="vendor/bootstrap/js/popper.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<script>
-$(".js-select2").each(function(){
-  $(this).select2({
-    minimumResultsForSearch: 20,
-    dropdownParent: $(this).next('.dropDownSelect2')
-  });
-})
-</script>
 <!--===============================================================================================-->
 <script src="vendor/slick/slick.min.js"></script>
 <script src="js/slick-custom.js"></script>
 <!--===============================================================================================-->
-<script src="vendor/parallax100/parallax100.js"></script>
-<script>
-$('.parallax100').parallax100();
-</script>
 <!--===============================================================================================-->
 <script src="vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->

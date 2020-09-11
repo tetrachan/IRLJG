@@ -2817,10 +2817,7 @@ button.mfp-close {
   .p-r-0-xl {padding-right: 0;}
   .p-l-15-xl {padding-left: 15px;}
   .p-r-15-xl {padding-right: 15px;}
-  .p-lr-cool{
-  padding-left: 400px;
-  padding-right: 400px;
-}
+  .p-lr-cool{padding-left: 400px; padding-right: 400px;}
 
   .w-full-xl {width: 100%;}
 
